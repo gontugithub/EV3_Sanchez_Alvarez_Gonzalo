@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 80px 1fr 40px;
+    grid-template-areas: 
+    "zh"
+    "zn"
+    "zs"
+    "zf";
+}
+
+header{
+    grid-area: zh;
+    background-color: rgb(137, 161, 189);
+    display: flex;
+    align-items: center;
+    justify-content: flex;
+}
+
+nav{
+    grid-area: zn;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > div {
+    margin: 20px;
+    font-size: 20px;
+} 
+
+nav > div:hover{
+    color: #597EBE;
+}
+
+section {
+    grid-area: zs;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#contenedor_modal_libros{
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+#h_contenedor_modal_libros{
+    width: 100%;
+    display: flex;
+}
+
+#h_contenedor_modal_libros > div{
+  width: 50%;
+
+}
+
+.div_insertar{
+   margin: auto;
+   width: 20%;
+   height: 70px;
+   text-align: center;
+   padding: 5px;
+}
+
+.div_filtro{
+    margin: auto;
+    width: 20%;
+    height: 70px;
+    text-align: center;
+    padding: 5px;
+ }
+
+.insertar{
+    font-size: 30px;
+}
+
+.div_tabla{
+    background-color: peachpuff;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 96%;
+    font-size: 12px;
+
+}
+
+th,td {
+  padding: 10px;
+  text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #648dd3;
+  }
+  
+tbody tr:nth-child(even) {
+    background-color: #d2e1ff;
+  }
+
+
+footer{
+    grid-area: zf;
+    background-color: #597EBE; 
+    color: white;
+}
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/scripts/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/formularios.css">
+    <script src="assets/fontawesome-free-5.15.4-web/js/all.js"></script>
+    <title>LIBROS</title>
+</head>
+
+<body onload="fMostrarLibros()">
+
+    
+    <header></header>
+    <nav>
+        <div onclick="fMostrarLibros()">LIBROS</div>
+    </nav>
+    <section>
+        <div id="modal_formularios">
+        
+            <div id="formulario_libros" class="formulario">
+                <label for="lib_id" id="l_lib_id">ID</label>
+                <input type="text" id="lib_id">
+                <label for="lib_titulo">TITULO</label>
+                <input type="text" id="lib_titulo">
+                <label for="lib_autor">AUTOR</label>
+                <input type="text" id="lib_autor">
+                <label for="lib_editorial">EDITORIAL</label>
+                <input type="text" id="lib_editorial">
+                <label for="lib_precio">PRECIO</label>
+                <input type="number" id="lib_precio">
+
+                <div class="botonera">
+                    <div id="lib_cancelar" onclick="fMostrarModal('#modal_libros')">CANCEL</div>
+                    <div id="lib_add" onclick="fCRUDLibros('i')">INSERTAR</div>
+                    <div id="lib_mod" onclick="fCRUDLibros('m')">MODIFICAR</div>
+                    <div id="lib_del" onclick="fCRUDLibros('d')">ELIMINAR</div>
+                </div>
+            </div>
+            
+    
+        </div>
+
+        <div id="modal_libros" class="modal">
+            <div id="contenedor_modal_libros">
+            <div id="h_contenedor_modal_libros">
+                <div class="div_insertar">
+                    <div class="texto_insertar">INSERTAR  <span onclick="fPrepararFormLibros('insertar','','','','','','')"><i class="fas fa-plus"></i></span></div>
+                </div>
+                <div class="div_filtro">
+                    <div class="texto_insertar" >FILTRAR  <span onclick="fMostrarLibrosFiltros()"><i class="fas fa-search"></i></span></div>
+                    <input type="text" id="filtro_libros" onkeypress="fMostrarLibrosFiltros()">
+                </div>
+            </div>
+                <div class="div_tabla">
+                    <table id="tabla_libros">
+                    </table>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>
